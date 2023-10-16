@@ -25,4 +25,10 @@ require("lazy").setup({
 		    notify = false,
 	  }
   },
+  { 
+    import = "lazy.plugins.lsp",
+    change_detection = {
+		    notify = false,
+	  }
+  },
 })
