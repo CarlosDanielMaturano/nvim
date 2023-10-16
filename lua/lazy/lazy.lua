@@ -19,4 +19,10 @@ require("lazy").setup({
 		    notify = false,
 	  }
   },
+  { 
+    import = "lazy.plugins.code",
+    change_detection = {
+		    notify = false,
+	  }
+  },
 })
