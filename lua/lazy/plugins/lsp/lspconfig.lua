@@ -10,18 +10,18 @@ return {
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap -- for conciseness
 		local on_attach = function(client, bufnr)
-			keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>" ) -- show definition, references
-			keymap.set("n", "gD", vim.lsp.buf.declaration ) -- go to declaration
-			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>" ) -- show lsp definitions
-			keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>" ) -- show lsp implementations
-			keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>" ) -- show lsp type definitions
-			keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action ) -- see available code actions, in visual mode will apply to selection
-			keymap.set("n", "<leader>rn", vim.lsp.buf.rename ) -- smart rename
+			keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>") -- show definition, references
+			keymap.set("n", "gD", vim.lsp.buf.declaration) -- go to declaration
+			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>") -- show lsp definitions
+			keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>") -- show lsp implementations
+			keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>") -- show lsp type definitions
+			keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action) -- see available code actions, in visual mode will apply to selection
+			keymap.set("n", "<leader>rn", vim.lsp.buf.rename) -- smart rename
 			keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>") -- show  diagnostics for file
-			keymap.set("n", "<leader>d", vim.diagnostic.open_float ) -- show diagnostics for line
-			keymap.set("n", "[d", vim.diagnostic.goto_prev ) -- jump to previous diagnostic in buffer
-			keymap.set("n", "]d", vim.diagnostic.goto_next ) -- jump to next diagnostic in buffer
-			keymap.set("n", "K", vim.lsp.buf.hover ) -- show documentation for what is under cursor
+			keymap.set("n", "<leader>d", vim.diagnostic.open_float) -- show diagnostics for line
+			keymap.set("n", "[d", vim.diagnostic.goto_prev) -- jump to previous diagnostic in buffer
+			keymap.set("n", "]d", vim.diagnostic.goto_next) -- jump to next diagnostic in buffer
+			keymap.set("n", "K", vim.lsp.buf.hover) -- show documentation for what is under cursor
 		end
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 		lspconfig["html"].setup({
@@ -91,8 +91,4 @@ return {
 		end
 		vim.lsp.handlers["textDocument/publishDiagnostics"] = filter_tsserver_diagnostics
 	end,
-  
 }
-
-
-
