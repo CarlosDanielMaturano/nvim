@@ -15,6 +15,7 @@ return {
         colors = {
           normal_bg = "#080808",
         },
+        code_action = "",
       },
       symbol_in_winbar = {
         enable = false,

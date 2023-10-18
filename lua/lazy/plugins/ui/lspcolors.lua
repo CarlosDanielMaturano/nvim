@@ -13,9 +13,5 @@ return {
         BetterVirtualTextPrefixHint = { link = "DiagnosticSignHint" },
       },
     })
-
-    vim.diagnostic.config({
-      virtual_text = false, -- Don't forget to disable virtual_text
-    })
   end,
 }

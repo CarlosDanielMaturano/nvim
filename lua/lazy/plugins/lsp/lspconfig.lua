@@ -10,10 +10,11 @@ return {
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
     local keymap = vim.keymap -- for conciseness
     local on_attach = function(client, bufnr)
+      keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>") -- show definition, references
       keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>") -- show definition, references
       keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>") -- got to declaration
-      keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>") -- see definition and make edits in window
-      keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>") -- go to implementation
+      keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>") -- show lsp implementations
+      keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>") -- show lsp definitions
       keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>") -- see available code actions
       keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>") -- smart rename
       keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>") -- show  diagnostics for line
@@ -90,5 +91,9 @@ return {
       vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
     end
     vim.lsp.handlers["textDocument/publishDiagnostics"] = filter_tsserver_diagnostics
+
+    vim.diagnostic.config({
+      virtual_text = false,
+    })
   end,
 }
