@@ -10,8 +10,9 @@ opt.shiftwidth = default_ident_size
 
 opt.expandtab = true
 opt.autoindent = true
-
 opt.wrap = false
+
+--opt.guicursor = ""
 
 -- Search settings
 opt.ignorecase = true

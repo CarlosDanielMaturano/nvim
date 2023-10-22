@@ -9,13 +9,13 @@ return {
 
     mason.setup({})
     mason_lspconfig.setup({
-      ensured_installed = {
+      ensure_installed = {
         "tsserver",
         "html",
         "cssls",
         "tailwindcss",
         "lua_ls",
-        "emmtet_ls",
+        "emmet_ls",
       },
       automatic_installation = true,
     })
