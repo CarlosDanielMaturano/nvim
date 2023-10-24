@@ -11,8 +11,7 @@ opt.shiftwidth = default_ident_size
 opt.expandtab = true
 opt.autoindent = true
 opt.wrap = false
-
---opt.guicursor = ""
+opt.guicursor = ""
 
 -- Search settings
 opt.ignorecase = true
@@ -23,7 +22,7 @@ opt.incsearch = true
 opt.termguicolors = true
 opt.background = "dark"
 
-opt.cursorline = true
+--opt.cursorline = true
 
 opt.signcolumn = "no"
 
