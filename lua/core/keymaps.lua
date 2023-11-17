@@ -23,3 +23,6 @@ km.set("n", "<C-k>", "<C-w>k")
 -- Split window
 km.set("n", "s-", ":split<Return><C-w>w", { silent = true })
 km.set("n", "sv", ":vsplit<Return><C-w>w", { silent = true })
+
+-- vim fugitive
+km.set("n", "<leader>gs", vim.cmd.Git)

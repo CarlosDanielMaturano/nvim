@@ -12,6 +12,7 @@ opt.expandtab = true
 opt.autoindent = true
 opt.wrap = false
 opt.guicursor = ""
+opt.mouse = ""
 
 -- Search settings
 opt.ignorecase = true

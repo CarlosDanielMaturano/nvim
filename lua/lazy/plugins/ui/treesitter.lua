@@ -16,7 +16,7 @@ return {
         enable_close_on_slash = false,
       },
       auto_install = true,
-      indent = { enable = true },
+      indent = true,
     })
   end,
 }
