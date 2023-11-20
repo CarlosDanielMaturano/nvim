@@ -41,3 +41,5 @@ vim.cmd([[
   set fillchars+=vert:\|
 ]])
 opt.colorcolumn = "81"
+
+opt.swapfile = false

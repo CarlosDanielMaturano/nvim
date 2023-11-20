@@ -26,3 +26,6 @@ km.set("n", "sv", ":vsplit<Return><C-w>w", { silent = true })
 
 -- vim fugitive
 km.set("n", "<leader>gs", vim.cmd.Git)
+
+km.set("n", "<C-n>", "<cmd>silent !tmux neww <CR>")
+km.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer <CR>")
