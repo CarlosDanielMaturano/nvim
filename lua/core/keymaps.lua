@@ -20,6 +20,9 @@ km.set("n", "<C-h>", "<C-w>h")
 km.set("n", "<C-l>", "<C-w>l")
 km.set("n", "<C-k>", "<C-w>k")
 
+km.set("n", "vt", ":vsplit term://zsh<CR>")
+km.set("n", "vh", ":tsplit term://zsh<CR>")
+
 -- Split window
 km.set("n", "s-", ":split<Return><C-w>w", { silent = true })
 km.set("n", "sv", ":vsplit<Return><C-w>w", { silent = true })

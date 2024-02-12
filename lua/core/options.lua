@@ -3,7 +3,7 @@ local opt = vim.opt
 opt.number = true
 opt.relativenumber = true
 
-local default_ident_size = 2
+local default_ident_size = 4
 
 opt.tabstop = default_ident_size
 opt.shiftwidth = default_ident_size
@@ -40,6 +40,8 @@ opt.fillchars:append({ eob = "~" })
 vim.cmd([[
   set fillchars+=vert:\|
 ]])
-opt.colorcolumn = "81"
+--opt.colorcolumn = "81"
 
 opt.swapfile = false
+vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/.undo"
+opt.undofile = true
