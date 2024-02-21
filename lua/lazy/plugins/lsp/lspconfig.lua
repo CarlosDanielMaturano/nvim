@@ -105,7 +105,7 @@ return {
     vim.lsp.handlers["textDocument/publishDiagnostics"] = filter_tsserver_diagnostics
 
     vim.diagnostic.config({
-      virtual_text = false,
+      virtual_text = true,
     })
   end,
 }
